@@ -1,0 +1,72 @@
+@font-face{
+    font-family: myhFont;
+    src: url(fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face{
+    font-family: mytFont;
+    src: url(fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to right,white,red );
+}
+.main_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading_txt_cont{
+ height: 50px;
+ border: 3px solid black;
+ margin: 20px;
+}
+h1,h2{
+    font-family: myhFont;
+}
+p{
+    font-family: mytFont;  
+}
+hr{
+    width: 60%;
+    align-self: center;
+    border: 2px solid black;
+}
+.heading_info_cont{
+    width: 70%;
+    text-align: center;
+}
+.main_info_cont{
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+.info_cont{
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    width: 400px;
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+
+

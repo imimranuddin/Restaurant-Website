@@ -1,0 +1,114 @@
+/* Inserted  font family from my local storage */
+
+@font-face{
+    font-family: myhFont;
+    src: url(fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face{
+    font-family: mytFont;
+    src: url(fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+
+/* avoiding browsers to apply default margin and padding to elements */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* to center align horzontally and vertically a flex item, same code I applied in many flex container to vertically and horizontally align the items*/
+
+.centerFlexItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling the heading h1 - given font family "poppins", with font size 70px with color white */
+
+h1{
+    font-family: myhFont;
+    font-size: 70px;
+    color: white;
+}
+
+/* Styling the paragraph - given font family "montserrat",default font size with color "white" */
+
+p{
+    font-family: mytFont;
+    color: white;
+}
+
+/* Added background image to mainContainer */
+.mainContainer{
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+    background-image: url(images/imagebg.jpg);
+    z-index: 1;
+}
+
+/* used ::before pseudo tag to add background color opacity to background image  */
+
+.mainContainer::before{
+    background-color: rgba(0, 0,0,0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-position: center;
+    content: "";
+    z-index: -1;
+}
+
+/* this is the main CONTENT CONTAINER i made it flex for easy alignment and min value to height and width for responsiveness */
+
+.contentCont{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+/* In the main content conatiner I have this text container which contains a welcome message and brief description of the restaurant */
+
+.textContent{
+max-width: 60vw;
+text-align:left;
+display: flex;
+flex-direction: column;
+}
+/* In the main content conatiner I have this button container which contains 3 buttons of diiferent pages of the site with link to their respective location */
+
+.mContBtn{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Here I styled 3 buttons  */
+.btn{
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    font-family: mytFont;
+    font-size: 20px;
+}
+
+/* Here I made those button change their size and color while hovering oven them also changed the cursor style */
+
+.btn:hover{
+    font-size: 25px;
+    padding: 20px 25px;
+    color: white;
+    background-color: crimson;
+    cursor: pointer;
+}
+
+
+

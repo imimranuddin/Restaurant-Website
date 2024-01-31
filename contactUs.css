@@ -1,0 +1,102 @@
+/* Inserted  font family from my local storage */
+@font-face{
+  font-family: myhFont;
+  src: url(fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face{
+  font-family: mypFont;
+  src: url(fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+/* avoiding browsers to apply default margin and padding to elements */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Added background image to mainContainer */
+
+.mainContainer {
+  background-image: url(images/contactUs.jpg);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* used ::before pseudo tag to add background color opacity to background image  */
+.mainContainer::before{
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index:-1;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.contactHeading{
+  text-align: center;
+  width: 70%;
+}
+.contactHeading h1{
+  color: white;
+  font-family: myhFont;
+  font-size: 50px;
+}
+.contactHeading p{
+  color: white;
+  font-family: mypFont;
+}
+.contactContent {
+  min-width:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+.formContainer h2{
+  font-family: myhFont;
+  margin-top: 20px;
+  color: white;
+}
+.contactForm {
+  width: 80%;
+  margin:20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactForm input,
+textarea {
+  margin-top: 15px;
+  padding: 15px;
+  border: 0;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  font-family: mypFont;
+  font-size: 15px;
+}
+
+input[type=submit]:hover{
+  background-color: crimson;
+  position: relative;
+  top: 10px;
+  color: white;
+  cursor: pointer;
+}
